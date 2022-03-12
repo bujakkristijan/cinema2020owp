@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="movieInsert.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<title>Insert movie</title>
+</head>
+<body>
+<div class = "container">
+	<div class = "jumbotron">
+		<a style="display:block" href="index.html">
+			<img src="images/logo3.png" alt = "Cinema Cile">
+			<span style="font-size:60px">Cinema Cile </span>
+			
+		</a>
+		<div class= "menu">
+			<form action=login.html>
+				<input class ="menu_btn" id= "login_btn" type="submit" value="login"/>
+			</form>
+			<form action=registration.html>
+				<input class ="menu_btn" id= "registration_btn" type="submit" value="registration"/>
+			</form>
+			<form action=profile.html>
+				<input class ="menu_btn" id= "profile_btn" type="submit" value="profile"/>
+			</form>
+			<form action=login.html>
+				<input class ="menu_btn" id= "logout_btn" type="submit" value="logout"/>
+			</form>
+		</div>
+		
+		
+	</div>	
+
+<h1>
+Insert movie
+</h1>
+<hr/>
+	<br/><br/>
+	<div class = "movieInsert">
+		<table cellspacing="2" align="center" cellpadding="8" border="0">
+			<tr>
+				<td align="right">Name: </td>
+				<td> <input type="text" placeholder="Insert name here" id="nameInput" class="tb"/></td>
+			</tr>
+			<tr>
+				<td align="right">Director: </td>
+				<td> <input type="text" placeholder="Insert director here" id="directorInput" class="tb"/></td>
+			</tr>
+			<tr>
+				<td align="right">Actors: </td>
+				<td> <input type="text" placeholder="Insert actors here" id="actorsInput" class="tb"/></td>
+			</tr>
+			<tr>
+				<td align="right">Genres: </td>
+				<td> <input type="text" placeholder="Insert genres here" id="genresInput" class="tb"/></td>
+			</tr>
+			<tr>
+				<td align="right">Duration: </td>
+				<td> <input type="text" placeholder="Insert duration here" id="durationInput" class="tb" min="" maxlength="7" max="10000000" onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;" onkeyup="preventDot(this.id)" onpaste="return false;"/></td>
+			</tr>
+			<tr>
+				<td align="right">Country: </td>
+				<td> <input type="text" placeholder="Insert country here" id="countryInput" class="tb"/></td>
+			</tr>
+			<tr>
+				<td align="right">Distributor: </td>
+				<td> <input type="text" placeholder="Insert distributor here" id="distributorInput" class="tb"/></td>
+			</tr>
+			<tr>
+				<td align="right">Year: </td>
+				<td> <input type="text" placeholder="Insert year here" id="yearInput" class="tb" min="" maxlength="7" max="10000000" onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;" onkeyup="preventDot(this.id)" onpaste="return false;"/></td>
+			</tr>
+			<tr>
+				<td align="right">Description: </td>
+				<td> <input type="text" placeholder="Insert description here" id="descriptionInput" class="tb"/></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="reset" value='Clear form' id="res" class="btn" onclick="clearForm()" />
+					<input type="submit" value='Add movie' class="btn" onclick="movieAdd()" />
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+
+</div>
+<script src="js/menu.js" charset="utf 8"></script>
+<script src="js/movieInsert.js" charset="utf 8"></script>
+<script src="js/logout.js" charset="utf 8"></script>
+</body>
+
+</html>

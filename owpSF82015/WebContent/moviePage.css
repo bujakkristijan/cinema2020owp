@@ -1,0 +1,32 @@
+.movieDataLabel{
+	font-size: 100%;
+	width: 35%;
+}
+
+#name, #director, #actors, #genres, #duration,  #distributor, #country, #year{
+	/* background-color: #00ccff; */
+	background: transparent;
+	border-width: 0px;
+	border:none;
+}
+
+#deleteMovieBtn, #editMovieBtn, #confirmBtn, #buyTicketBtn{
+	background-color: #8000ff;
+}
+
+#description{
+	background: transparent; 
+	border-width: 0px;
+	border:none;
+	height: 150%;
+	
+	
+	
+}
+
+.movieDataLabelDescription{
+	font-size: 100%;
+	width: 35%;
+	height: 150%;
+	word-break: break-word;
+}

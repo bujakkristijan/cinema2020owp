@@ -1,0 +1,88 @@
+.projectionDataLabel{
+	font-size: 100%;
+	width: 35%;
+}
+
+#hall, #date, #type, #price, #duration,  #unsoldSeat{
+	/* background-color: #00ccff; */
+	/*float: right; */
+	background: transparent;
+	border-width: 0px;
+	border:none;
+}
+
+#movie{
+	background: transparent;
+	border-width: 0px;
+	border:none;
+}
+
+#deleteProjectionBtn, #buyTicketBtn{
+	background-color: #8000ff;
+}
+
+
+table.darkTable {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  border: 2px solid #5033CF;
+  background-color: #383692;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.darkTable td, table.darkTable th {
+  border: 1px solid #000000;
+  padding: 3px 2px;
+}
+table.darkTable tbody td {
+  font-size: 13px;
+  color: white;
+}
+
+table.darkTable tr:nth-child(even) {
+  background: #851f94;
+ color: white;
+}
+
+table.darkTable tr:nth-child(odd) {
+
+ color: white;
+}
+table.darkTable thead {
+  background: #271E69;
+  border-bottom: 3px solid #000000;
+}
+table.darkTable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  border-left: 2px solid #4A4A4A;
+}
+table.darkTable thead th:first-child {
+  border-left: none;
+}
+
+table.darkTable tfoot td {
+  font-size: 12px;
+}
+
+#roles,#rolesS,#usernameSearch,#searchBtn,#rolesSearch{
+	 background: #271E69;
+	 color: white;
+}
+a{
+	 color: white;
+}
+table a:hover {
+  color: #c0c0c0;
+}
+
+table a:visited {
+  color: #c0c0c0;
+}
+
+table a:active {
+  color: #c0c0c0;
+}

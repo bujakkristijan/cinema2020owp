@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="userPage.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<title>Profile</title>
+</head>
+<body>
+<div class = "container">
+	<div class = "jumbotron">
+		<a style="display:block" href="index.html">
+			<img src="images/logo3.png" alt = "Cinema Cile">
+			<span style="font-size:60px">Cinema Cile </span>
+			
+		</a>
+		<div class= "menu">
+			<form action=login.html>
+				<input class ="menu_btn" id= "login_btn" type="submit" value="login"/>
+			</form>
+			<form action=registration.html>
+				<input class ="menu_btn" id= "registration_btn" type="submit" value="registration"/>
+			</form>
+			<form action=profile.html>
+				<input class ="menu_btn" id= "profile_btn" type="submit" value="profile"/>
+			</form>
+			<form action=login.html>
+				<input class ="menu_btn" id= "logout_btn" type="submit" value="logout"/>
+			</form>
+		</div>
+		
+		
+	</div>	
+
+<h1>
+User page
+</h1>
+	<br/><br/>
+	<div align= "center" class="userData">
+	
+		<label class="userDataLabel" >Username: </label>
+		<input class="userDataLabel" id = "usernameInput" disabled> </input>
+		
+		<label class="userDataLabel" >Registration Date: </label>
+		<input class="userDataLabel" id = "dateInput" disabled> </input>
+		
+		<label class="userDataLabel" >Role: </label>
+		<input class="userDataLabel" id = "roleInput" disabled> </input>
+	</div>
+	<div class = "profile">
+		<table cellspacing="2" align="center" cellpadding="8" border="0">
+			<tr>
+				<td align="right">Set new role </td>
+				<td>
+					<select name = "roles" id="changeRole">
+						<option value="admin">Admin</option>
+						<option value="member">Member</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<input type="submit" value='Delete user' id="deleteUserBtn" class="btn" onclick="deleteUser()" />
+				</td>
+				<td>
+					<input type="submit" value='Change role' id="changeUserBtn" class="btn" onclick="changeRole()" />
+					
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+
+	<div id= "ticket">
+	<h3>Tikets: </h3>
+	<table id="ticketTable" class="darkTable">
+	<thead>
+		<tr>
+			<th id= "ticketTableDate" onclick = "sortTable(0)" >Date</th>
+			
+				
+		</tr>
+	</thead>
+	<tbody id = "datas" class="datas">
+	
+	</tbody>
+	</table>
+	<br/><br/>
+	</div>
+</div>
+<script src="js/menu.js" charset="utf 8"></script>
+<script src="js/userPage.js" charset="utf 8"></script>
+<script src="js/logout.js" charset="utf 8"></script>
+</body>
+
+</html>

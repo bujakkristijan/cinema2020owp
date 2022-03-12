@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="userList.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<title>User List</title>
+</head>
+<body>
+
+
+<div class = "container">
+		<div class = "jumbotron">
+		<a style="display:block" href="index.html">
+			<img src="images/logo3.png" alt = "Cinema Cile">
+			<span style="font-size:60px">Cinema Cile </span>
+			
+		</a>
+		<div class= "menu">
+			<form action=login.html>
+				<input class ="menu_btn" id= "login_btn" type="submit" value="login"/>
+			</form>
+			<form action=registration.html>
+				<input class ="menu_btn" id= "registration_btn" type="submit" value="registration"/>
+			</form>
+			<form action=profile.html>
+				<input class ="menu_btn" id= "profile_btn" type="submit" value="profile"/>
+			</form>
+			<form action=userList.html>
+				<input class ="menu_btn" id= "userList_btn" type="submit" value="user list"/>
+			</form>
+			<form action=login.html>
+				<input class ="menu_btn" id= "logout_btn" type="submit" value="logout"/>
+			</form>
+		</div>
+		
+		
+	</div>	
+
+	
+<h1 >User list</h1>
+
+<hr>
+<br>
+
+<table id="userTable" class="darkTable">
+<thead>
+<tr>
+<th onclick="sortTable(0)">Username</th>
+<th  onclick="sortTable(1)">Date</th>
+<th onclick="sortTable(2)" >Role</th>
+<th  onclick="sortTable(3)" >Deleted</th>
+</tr>
+</thead>
+<tbody id = "datas" class="datas">
+
+</tbody>
+
+</table>
+<br/>
+
+<div>
+ <label for="roles">Sort by role:</label>
+
+<select name="roles" id="roles">
+  <option  onclick="sortTableCombo('admin')"value="admin">Admin</option>
+  <option onclick="sortTableCombo('member')"  value="member">Member</option>
+</select> 
+
+<button type="button"  id="searchBtn">Search by username</button>
+<input type="text" placeholder="Enter username" id="usernameSearch"  />
+
+<label for="rolesSerach">Serach by role:</label>
+
+<select  name="rolesS" id="rolesSearch">
+ <option  value="all">All</option>
+  <option value="admin">Admin</option>
+  <option   value="member">Member</option>
+ 
+</select> 
+
+</div>
+</div>
+
+
+</body>
+	
+<script src="js/menu.js" charset="utf-8"></script>
+<script src="js/userList.js" charset="utf-8"></script>
+<script src="js/logout.js" charset="utf-8"></script>
+</html>

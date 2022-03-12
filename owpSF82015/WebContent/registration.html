@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="registration.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<title>Registration</title>
+</head>
+<body>
+<div class = "container">
+	<div class = "jumbotron">
+		<a style="display:block" href="index.html">
+			<img src="images/logo3.png" alt = "Cinema Cile">
+			<span style="font-size:60px">Cinema Cile </span>
+			
+		</a>
+		<div class= "menu">
+			<form action=login.html>
+				<input class ="menu_btn" id= "login_btn" type="submit" value="login"/>
+			</form>
+			<form action=registration.html>
+				<input class ="menu_btn" id= "registration_btn" type="submit" value="registration"/>
+			</form>
+			<form action=profile.html>
+				<input class ="menu_btn" id= "profile_btn" type="submit" value="profile"/>
+			</form>
+			<form action=login.html>
+				<input class ="menu_btn" id= "logout_btn" type="submit" value="logout"/>
+			</form>
+		</div>
+		
+		
+	</div>	
+
+<h1>
+Registration
+</h1>
+	<br/><br/>
+	<div class = "registration">
+		<table cellspacing="2" align="center" cellpadding="8" border="0">
+			<tr>
+				<td align="right">Insert Username: </td>
+				<td> <input type="text" placeholder="Insert username here" id="usernameInput" class="tb"/></td>
+			</tr>
+			<tr>
+				<td align="right">Insert Password: </td>
+				<td> <input type="password" placeholder="Insert password here" id="passwordInput" class="tb"/></td>
+			</tr>
+			<tr>
+				<td align="right">Confirm Password: </td>
+				<td> <input type="password" placeholder="Confirm password here" id="confirmPasswordInput" class="tb"/></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="reset" value='Clear form' id="res" class="btn" onclick="clearForm()" />
+					<input type="submit" value='Create account' class="btn" onclick="registration()" />
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+
+</div>
+<script src="js/menu.js" charset="utf 8"></script>
+<script src="js/registration.js" charset="utf 8"></script>
+<script src="js/logout.js" charset="utf 8"></script>
+</body>
+
+</html>

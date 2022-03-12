@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="ticketPage.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<title>Movie</title>
+</head>
+<body>
+<div class = "container">
+	<div class = "jumbotron">
+		<a style="display:block" href="index.html">
+			<img src="images/logo3.png" alt = "Cinema Cile">
+			<span style="font-size:60px">Cinema Cile </span>
+			
+		</a>
+		<div class= "menu">
+			<form action=login.html>
+				<input class ="menu_btn" id= "login_btn" type="submit" value="login"/>
+			</form>
+			<form action=registration.html>
+				<input class ="menu_btn" id= "registration_btn" type="submit" value="registration"/>
+			</form>
+			<form action=profile.html>
+				<input class ="menu_btn" id= "profile_btn" type="submit" value="profile"/>
+			</form>
+			<form action=login.html>
+				<input class ="menu_btn" id= "logout_btn" type="submit" value="logout"/>
+			</form>
+		</div>
+		
+		
+	</div>	
+
+<h1>
+Ticket page
+</h1>
+<hr/>
+	<br/><br/>
+	<div align= "center" class="ticketData">
+	
+		<label class="ticketDataLabel" >Movie: </label>
+		<input type="submit" class="ticketDataLabel" id = "movie" onClick= "moviePage()"> </input>
+		
+		<label class="ticketDataLabel" >Date: </label>
+		<input type="submit" class="ticketDataLabel" id = "date" onclick="projectionPage()" ></input>
+		
+		<label class="ticketDataLabel" >Type: </label>
+		<input class="ticketDataLabel" id = "type" disabled> </input>
+		
+		<label class="ticketDataLabel" >Hall: </label>
+		<input class="ticketDataLabel" id = "hall" disabled> </input>
+		
+		<label class="ticketDataLabel" >Price: </label>
+		<input class="ticketDataLabel" id = "price" disabled type="text" min="" maxlength="7" max="10000000" onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;" onkeyup="preventDot(this.id)" onpaste="return false;"> </input>
+		
+		<label class="ticketDataLabel" >Seat: </label>
+		<input class="ticketDataLabel" id = "seat" disabled> </input>
+		
+		<label class="ticketDataLabel" id = "buyerLabel" >Buyer: </label>
+		<input type="submit" class="ticketDataLabel" id = "buyer" onClick= "userPage()"> </input>
+		
+	</div>
+	<div class = "ticketPage">
+		<table cellspacing="2" align="center" cellpadding="8" border="0">
+			<tr>
+				<td>
+					<input type="submit" value='Delete ticket' id="deleteTicketBtn" class="btn" onclick="deleteTicket()" />
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+
+</div>
+<script src="js/menu.js" charset="utf 8"></script>
+<script src="js/ticketPage.js" charset="utf 8"></script>
+<script src="js/logout.js" charset="utf 8"></script>
+</body>
+
+</html>

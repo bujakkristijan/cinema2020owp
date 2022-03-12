@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="ticketBuy.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<title>Buy ticket</title>
+</head>
+<body>
+<div class = "container">
+	<div class = "jumbotron">
+		<a style="display:block" href="index.html">
+			<img src="images/logo3.png" alt = "Cinema Cile">
+			<span style="font-size:60px">Cinema Cile </span>
+			
+		</a>
+		<div class= "menu">
+			<form action=login.html>
+				<input class ="menu_btn" id= "login_btn" type="submit" value="login"/>
+			</form>
+			<form action=registration.html>
+				<input class ="menu_btn" id= "registration_btn" type="submit" value="registration"/>
+			</form>
+			<form action=profile.html>
+				<input class ="menu_btn" id= "profile_btn" type="submit" value="profile"/>
+			</form>
+			<form action=userList.html>
+				<input class ="menu_btn" id= "userList_btn" type="submit" value="user list"/>
+			</form>
+			<form action=movieList.html>
+				<input class ="menu_btn" id= "movieList_btn" type="submit" value="movie list"/>
+			</form>
+			<form action=login.html>
+				<input class ="menu_btn" id= "logout_btn" type="submit" value="logout"/>
+			</form>
+			<form action=movieInsert.html>
+				<input class ="menu_btn" id= "movieInsert_btn" type="submit" value="movie insert"/>
+			</form>
+			<form action=projectionInsert.html>
+				<input class ="menu_btn" id= "projectionInsert_btn" type="submit" value="projection insert"/>
+			</form>
+		</div>
+		
+		
+	</div>	
+
+<h1>
+Buy ticket
+</h1>
+<hr/>
+<br/>
+<div>
+	<input value="Movie" type="submit" class="projectionDataLabel" id= "movie" onclick="moviePage()"> </input>
+</div>
+<table id="projectionTable" class="darkTable">
+	<thead>
+		<tr>
+			<th>Date</th>
+			
+			<th onclick="sortTable(2)" >Hall</th>
+			<th onclick="sortTable(3)" >Type</th>
+			<th>Price</th>
+			<th>Buy Ticket</th>
+			
+		</tr>
+	</thead>
+	<tbody id = "datas" class="datas">
+	
+	</tbody>
+</table>
+<br/>
+<div id="stage2">
+	<input value="Date" type="submit" class="projectionDataLabel" id= "dateS2" onclick="projectionPage()"> </input>
+	<input value="Type" type="submit" class="projectionDataLabel" id= "typeS2"> </input>
+	<input value="Hall" type="submit" class="projectionDataLabel" id= "hallS2"> </input>
+	<input value="Price" type="submit" class="projectionDataLabel" id= "priceS2"> </input>
+	<br/><br/>
+	<div id = hideAfterStage2>
+	 	<div id = "takeSeat"></div>
+	 	<br/><br/><br/><br/>
+	 	<div id = "nextStage3">
+	 		<input value="Next" type="submit" class="projectionDataLabel" id= "nextStage3Input" onclick="nextStage3()"> </input>
+	 	</div>
+	</div>
+	
+	
+	
+	
+</div>
+
+<div id="stage3">
+	<input value="Seat" type="submit" class="projectionDataLabel" id= "seatS3"> </input>
+	<input value="Final price" type="submit" class="projectionDataLabel" id= "finalPriceS3"> </input>
+	<br/><br/>
+	
+	 	<br/><br/><br/><br/>
+	 	<div id = "lastStage">
+	 		<input value="Buy ticket" type="submit" class="projectionDataLabel" id= "lastStageBuyTicket" onclick="buyTicket()"> </input>
+	 	</div>
+	
+	
+	
+	
+	
+</div>
+
+<br/><br/>
+<br/><br/>
+
+</div>
+<script src="js/menu.js" charset="utf 8"></script>
+<script src="js/ticketBuy.js" charset="utf 8"></script>
+<script src="js/logout.js" charset="utf 8"></script>
+</body>
+</html>

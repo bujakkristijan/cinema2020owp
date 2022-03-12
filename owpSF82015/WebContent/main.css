@@ -1,0 +1,40 @@
+.jumbotron{
+	/*background-color: #2E2D88; */
+	font-size: 60px;
+	
+	font-family: 'Pacifico', cursive;
+	padding-left: 15px;
+	color: #00ccff;
+}
+
+body{
+	background-image: url("images/background1.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-color: #00ccff;
+	color:rgb(255, 255, 255);
+}
+
+img{
+	width:120px;
+	height:120px;
+	/*background-color:#2E2D88;*/
+}
+
+.jumbotron a{
+	color: #2E2D88;
+	text-decoration: none;
+}
+
+.menu_btn{
+	float: right;
+	font-size: 20%;
+	height: 10%;
+	width:12%;
+	color: #2E2D88;
+}
+
+.menu{
+	background-color: #2E2D88;
+}

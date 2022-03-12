@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="movieList.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<title>Movie List</title>
+</head>
+<body>
+
+
+<div class = "container">
+		<div class = "jumbotron">
+		<a style="display:block" href="index.html">
+			<img src="images/logo3.png" alt = "Cinema Cile">
+			<span style="font-size:60px">Cinema Cile </span>
+			
+		</a>
+		<div class= "menu">
+			<form action=login.html>
+				<input class ="menu_btn" id= "login_btn" type="submit" value="login"/>
+			</form>
+			<form action=registration.html>
+				<input class ="menu_btn" id= "registration_btn" type="submit" value="registration"/>
+			</form>
+			<form action=profile.html>
+				<input class ="menu_btn" id= "profile_btn" type="submit" value="profile"/>
+			</form>
+			<form action=userList.html>
+				<input class ="menu_btn" id= "userList_btn" type="submit" value="user list"/>
+			</form>
+			<form action=login.html>
+				<input class ="menu_btn" id= "logout_btn" type="submit" value="logout"/>
+			</form>
+		</div>
+		
+		
+	</div>	
+
+	
+<h1 >Movie list</h1>
+
+<hr>
+<br>
+
+<table id="movieTable" class="darkTable">
+<thead>
+<tr>
+<th onclick="sortTable(0)">Name</th>
+<th  onclick="sortTable(1)">Genres</th>
+<th onclick="sortTable(2)" >Duration (min)</th>
+<th onclick="sortTable(3)" >Distributor</th>
+<th onclick="sortTable(4)" >Country</th>
+<th  onclick="sortTable(5)" >Year</th>
+</tr>
+</thead>
+<tbody id = "datas" class="datas">
+
+</tbody>
+
+</table>
+<br/>
+
+<div>
+	<div class = "nameSearch">
+		<label> Name: </label>
+		<div>
+			<input type="text" placeholder="Insert name" id = "nameSearch" /> 
+		</div>
+	</div>
+	<div class = "genreSearch">
+		<label> Genres: </label>
+		<div>
+			<input type="text" placeholder="Insert genre" id = "genreSearch" /> 
+		</div>
+	</div>
+	<div class = "distributorSearch">
+		<label> Distributor: </label>
+		<div>
+			<input type="text" placeholder="Insert distributor" id = "distributorSearch" /> 
+		</div>
+	</div>
+	<div class = "countrySearch">
+		<label> Country: </label>
+		<div>
+			<input type="text" placeholder="Insert country" id = "countrySearch" /> 
+		</div>
+	</div>
+	<div class = "maxDurationSearch">
+		<label> Max duration: </label>
+		<div>
+			<input value="" type="text" min="" maxlength="7" max="10000000" placeholder="Max duration" id="maxDurationSearch" onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;" onkeyup="preventDot(this.id)" onpaste="return false;" /> 
+		</div>
+	</div>
+	<div class = "minDurationSearch">
+		<label> Min duration: </label>
+		<div>
+			<input value="" type="text" min="" maxlength="7" max="10000000" placeholder="Min duration" id="minDurationSearch" onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;" onkeyup="preventDot(this.id)" onpaste="return false;" /> 
+		</div>
+	</div>
+	<div class = "maxYearSearch">
+		<label> Max year: </label>
+		<div>
+			<input value="" type="text" min="" maxlength="7" max="10000000" placeholder="Max year" id="maxYearSearch" onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;" onkeyup="preventDot(this.id)" onpaste="return false;" /> 
+		</div>
+	</div>
+	<div class = "minYearSearch">
+		<label> Min year: </label>
+		<div>
+			<input value="" type="text" min="" maxlength="7" max="10000000" placeholder="Min year" id="minYearSearch" onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;" onkeyup="preventDot(this.id)" onpaste="return false;" /> 
+		</div>
+	</div>
+
+
+</div>
+	<br/>
+	<div class = "searchBtn">
+		<button type="button" id="searchBtn">Search</button>
+	</div>
+</div>
+
+
+</body>
+	
+<script src="js/menu.js" charset="utf-8"></script>
+<script src="js/movieList.js" charset="utf-8"></script>
+<script src="js/logout.js" charset="utf-8"></script>
+</html>

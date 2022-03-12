@@ -1,0 +1,24 @@
+.ticketDataLabel{
+	font-size: 100%;
+	width: 35%;
+}
+
+#ticket, #seat, #type, #price,  #hall{
+	/* background-color: #00ccff; */
+	float: right;
+	background: transparent;
+	border-width: 0px;
+	border:none;
+}
+
+#movie, #date, #buyer{
+	/* background-color: #00ccff; */
+	background: transparent;
+	border-width: 0px;
+	border:none;
+}
+
+#deleteTicketBtn {
+	background-color: #8000ff;
+}
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="projectionInsert.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<title>Insert projection</title>
+</head>
+<body>
+<div class = "container">
+	<div class = "jumbotron">
+		<a style="display:block" href="index.html">
+			<img src="images/logo3.png" alt = "Cinema Cile">
+			<span style="font-size:60px">Cinema Cile </span>
+			
+		</a>
+		<div class= "menu">
+			<form action=login.html>
+				<input class ="menu_btn" id= "login_btn" type="submit" value="login"/>
+			</form>
+			<form action=registration.html>
+				<input class ="menu_btn" id= "registration_btn" type="submit" value="registration"/>
+			</form>
+			<form action=profile.html>
+				<input class ="menu_btn" id= "profile_btn" type="submit" value="profile"/>
+			</form>
+			<form action=login.html>
+				<input class ="menu_btn" id= "logout_btn" type="submit" value="logout"/>
+			</form>
+		</div>
+		
+		
+	</div>	
+
+<h1>
+Insert projection
+</h1>
+<hr/>
+	<br/><br/>
+	<div class = "projectionInsert">
+		<table cellspacing="2" align="center" cellpadding="8" border="0">
+			<tr>
+				<td align="right">Movie: </td>
+				<td> <select id="movie" class="tb"></select> </td>
+			</tr>
+			<tr>
+				<td align="right">Hall: </td>
+				<td> <select id="hall" class="tb"></select> </td>
+			</tr>
+			<tr>
+				<td align="right">Type: </td>
+				<td> <select id="projectionType" class="tb"></select> </td>
+			</tr>
+			<tr>
+				<td align="right">Price: </td>
+				<td> <input type="text" id="price" class="tb" min="" maxlength="7" max="10000000" onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;" onpaste="return false;"/></td>
+			</tr>
+			<tr>
+				<td align="right">Date: </td>
+				<td> <input type="date" id = "date" name="trip-start" min="2022-01-01" max="2022-12-31">
+				
+					<input type="time" id="time" name="appt" min="9:00" max="23:00"> </td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td>
+					<input type="reset" value='Clear form' id="res" class="btn" onclick="clearForm()" />
+					<input type="submit" value='Add projection' class="btn" onclick="projectionAdd()" />
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+
+</div>
+<script src="js/menu.js" charset="utf 8"></script>
+<script src="js/projectionInsert.js" charset="utf 8"></script>
+<script src="js/logout.js" charset="utf 8"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="projectionList.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<title>Welcome</title>
+</head>
+<body>
+<div class = "container">
+	<div class = "jumbotron">
+		<a style="display:block" href="index.html">
+			<img src="images/logo3.png" alt = "Cinema Cile">
+			<span style="font-size:60px">Cinema Cile </span>
+			
+		</a>
+		<div class= "menu">
+			<form action=login.html>
+				<input class ="menu_btn" id= "login_btn" type="submit" value="login"/>
+			</form>
+			<form action=registration.html>
+				<input class ="menu_btn" id= "registration_btn" type="submit" value="registration"/>
+			</form>
+			<form action=profile.html>
+				<input class ="menu_btn" id= "profile_btn" type="submit" value="profile"/>
+			</form>
+			<form action=userList.html>
+				<input class ="menu_btn" id= "userList_btn" type="submit" value="user list"/>
+			</form>
+			<form action=movieList.html>
+				<input class ="menu_btn" id= "movieList_btn" type="submit" value="movie list"/>
+			</form>
+			<form action=login.html>
+				<input class ="menu_btn" id= "logout_btn" type="submit" value="logout"/>
+			</form>
+			<form action=movieInsert.html>
+				<input class ="menu_btn" id= "movieInsert_btn" type="submit" value="movie insert"/>
+			</form>
+			<form action=projectionInsert.html>
+				<input class ="menu_btn" id= "projectionInsert_btn" type="submit" value="projection insert"/>
+			</form>
+		</div>
+		
+		
+	</div>	
+
+<h1>
+Welcome
+</h1>
+<hr/>
+<br/>
+<table id="projectionTable" class="darkTable">
+	<thead>
+		<tr>
+			<th id="movieTh" onclick="sortTable(0)">Movie</th>
+			<th  onclick="sortTable(1)">Date</th>
+			<th onclick="sortTable(2)" >Hall</th>
+			<th onclick="sortTable(3)" >Type</th>
+			<th onclick="sortTable(4)" >Price</th>
+			
+		</tr>
+	</thead>
+	<tbody id = "datas" class="datas">
+	
+	</tbody>
+</table>
+<br/>
+<div>
+	<div class = "movieSearch">
+		<label> Movie: </label>
+		<div>
+			<input type="text" placeholder="Insert movie" id = "movieSearch" /> 
+		</div>
+	</div>
+	<div class = "typeSearch">
+		<label> Type: </label>
+		<div>
+			<select name="typeSearch" id="typeSearch">
+				<option value="all">All</option>
+				<option value="2D">2D</option>
+				<option value="3D">3D</option>
+				<option value="4D">4D</option>
+			</select>
+		</div>
+	</div>
+	<div class = "hallSearch">
+		<label> Hall: </label>
+		<div>
+			<select name="hallSearch" id="hallSearch">
+				<option value="all">All</option>
+				<option value="Hall 1">Hall 1</option>
+				<option value="Hall 2">Hall 2</option>
+				<option value="Hall 3">Hall 3</option>
+				<option value="Hall 4">Hall 4</option>
+			</select>
+		</div>
+	</div>
+	
+	<div class = "maxPriceSearch">
+		<label> Max price: </label>
+		<div>
+			<input value="" type="text" min="" maxlength="7" max="10000000" placeholder="Max price" id="maxPriceSearch" onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;" onkeyup="preventDot(this.id)" onpaste="return false;" /> 
+		</div>
+	</div>
+	<div class = "minPriceSearch">
+		<label> Min price: </label>
+		<div>
+			<input value="" type="text" min="" maxlength="7" max="10000000" placeholder="Min price" id="minPriceSearch" onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;" onkeyup="preventDot(this.id)" onpaste="return false;" /> 
+		</div>
+	</div>
+	<div class = "minDateTimeSearch">
+		<label> Start date: </label>
+		<div>
+			<input type="date" id="minDateSearch" min="2020-01-01" max="2020-12-31">
+			
+			<input type="time" id="minTimeSearch" min = "09:00" max="23:00">
+		</div>
+	</div>
+	<div class = "maxDateTimeSearch">
+		<label> End date: </label>
+		<div>
+			<input type="date" id="maxDateSearch" min="2020-01-01" max="2020-12-31">
+			
+			<input type="time" id="maxTimeSearch" min = "09:00" max="23:00">
+		</div>
+	</div>
+
+
+<br/><br/>
+</div>
+<script src="js/menu.js" charset="utf 8"></script>
+<script src="js/projectionList.js" charset="utf 8"></script>
+<script src="js/logout.js" charset="utf 8"></script>
+</body>
+</html>

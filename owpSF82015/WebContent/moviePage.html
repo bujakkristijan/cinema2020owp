@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="moviePage.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<title>Movie</title>
+</head>
+<body>
+<div class = "container">
+	<div class = "jumbotron">
+		<a style="display:block" href="index.html">
+			<img src="images/logo3.png" alt = "Cinema Cile">
+			<span style="font-size:60px">Cinema Cile </span>
+			
+		</a>
+		<div class= "menu">
+			<form action=login.html>
+				<input class ="menu_btn" id= "login_btn" type="submit" value="login"/>
+			</form>
+			<form action=registration.html>
+				<input class ="menu_btn" id= "registration_btn" type="submit" value="registration"/>
+			</form>
+			<form action=profile.html>
+				<input class ="menu_btn" id= "profile_btn" type="submit" value="profile"/>
+			</form>
+			<form action=login.html>
+				<input class ="menu_btn" id= "logout_btn" type="submit" value="logout"/>
+			</form>
+		</div>
+		
+		
+	</div>	
+
+<h1>
+Movie page
+</h1>
+<hr/>
+	<br/><br/>
+	<div align= "center" class="movieData">
+	
+		<label class="movieDataLabel" >Name: </label>
+		<input class="movieDataLabel" id = "name" disabled> </input>
+		
+		<label class="movieDataLabel" >Director: </label>
+		<input class="movieDataLabel" id = "director" disabled> </input>
+		
+		<label class="movieDataLabel" >Actors: </label>
+		<input class="movieDataLabel" id = "actors" disabled> </input>
+		
+		<label class="movieDataLabel" >Genres: </label>
+		<input class="movieDataLabel" id = "genres" disabled> </input>
+		
+		<label class="movieDataLabel" >Duration: </label>
+		<input class="movieDataLabel" id = "duration" disabled type="text" min="" maxlength="7" max="10000000" onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;" onkeyup="preventDot(this.id)" onpaste="return false;"> </input>
+		
+		<label class="movieDataLabel" >Distributor: </label>
+		<input class="movieDataLabel" id = "distributor" disabled> </input>
+		
+		<label class="movieDataLabel" >Country: </label>
+		<input class="movieDataLabel" id = "country" disabled> </input>
+		
+		<label class="movieDataLabel" >Year: </label>
+		<input class="movieDataLabel" id = "year" disabled type="text" min="" maxlength="7" max="10000000" onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;" onkeyup="preventDot(this.id)" onpaste="return false;"> </input>
+		
+		<label class="movieDataLabel" >Description: </label>
+		<input class="movieDataLabelDescription" id = "description" disabled> </input>
+		
+	<br/><br/><br/><br/>
+	
+		
+	</div>
+	<div class = "moviePage">
+		<table cellspacing="2" align="center" cellpadding="8" border="0">
+			<tr>
+				<td>
+					<input type="submit" value='Delete movie' id="deleteMovieBtn" class="btn" onclick="deleteMovie()" />
+				</td>
+				<td>
+					<input type="submit" value='Edit movie' id="editMovieBtn" class="btn" onclick="editMovie()" />	
+				</td>
+				<td>
+					<input type="submit" value='Confirm changes' id="confirmBtn" class="btn" onclick="confirmMovieChanges()" />	
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+	<div class = "buyTicket">
+		<table cellspacing="2" align="center" cellpadding="8" border="0">
+			<tr>
+				<td>
+					<input type="submit" value='See projections' id="buyTicketBtn" class="btn" onclick="buyTicket()" />
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+
+</div>
+<script src="js/menu.js" charset="utf 8"></script>
+<script src="js/moviePage.js" charset="utf 8"></script>
+<script src="js/logout.js" charset="utf 8"></script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="projectionPage.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<title>Projection</title>
+</head>
+<body>
+<div class = "container">
+	<div class = "jumbotron">
+		<a style="display:block" href="index.html">
+			<img src="images/logo3.png" alt = "Cinema Cile">
+			<span style="font-size:60px">Cinema Cile </span>
+			
+		</a>
+		<div class= "menu">
+			<form action=login.html>
+				<input class ="menu_btn" id= "login_btn" type="submit" value="login"/>
+			</form>
+			<form action=registration.html>
+				<input class ="menu_btn" id= "registration_btn" type="submit" value="registration"/>
+			</form>
+			<form action=profile.html>
+				<input class ="menu_btn" id= "profile_btn" type="submit" value="profile"/>
+			</form>
+			<form action=login.html>
+				<input class ="menu_btn" id= "logout_btn" type="submit" value="logout"/>
+			</form>
+		</div>
+		
+		
+	</div>	
+
+<h1>
+Projection page
+</h1>
+<hr/>
+	<br/><br/>
+	<div align= "center" class="projectionData">
+	
+		<label class="projectionDataLabel" >Movie: </label>
+		<input class="projectionDataLabel" id = "movie" onclick="moviePage()"> </input>
+		
+		<label class="projectionDataLabel" >Hall: </label>
+		<input class="projectionDataLabel" id = "hall" disabled> </input>
+		
+		<label class="projectionDataLabel" >Type: </label>
+		<input class="projectionDataLabel" id = "type" disabled> </input>
+		
+		<label class="projectionDataLabel" >Date: </label>
+		<input class="projectionDataLabel" id = "date" disabled> </input>
+		
+		<label class="projectionDataLabel" >Price: </label>
+		<input class="projectionDataLabel" id = "price" disabled type="text" min="" maxlength="7" max="10000000" onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;" onkeyup="preventDot(this.id)" onpaste="return false;"> </input>
+		
+		<label class="projectionDataLabel" >Unsold seat: </label>
+		<input class="projectionDataLabel" id = "unsoldSeat" disabled type="text" min="" maxlength="7" max="10000000" onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;" onkeyup="preventDot(this.id)" onpaste="return false;"> </input>
+		
+		
+	</div>
+	<div class = "projectionPage">
+		<table cellspacing="2" align="center" cellpadding="8" border="0">
+			<tr>
+				<td>
+					<input type="submit" value='Delete projection' id="deleteProjectionBtn" class="btn" onclick="deleteProjection()" />
+				</td>
+				
+			</tr>
+			
+		</table>
+	</div>
+	<div class = "buyTicket">
+		<table cellspacing="2" align="center" cellpadding="8" border="0">
+			<tr>
+				<td>
+					<input type="submit" value='Buy ticket' id="buyTicketBtn" class="btn" onclick="buyTicket()" />
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+<br/><br/>
+
+	<div id= "ticket">
+	<h3>Tikets: </h3>
+	<table id="ticketTable" class="darkTable">
+	<thead>
+		<tr>
+			<th id= "ticketTableDate" >Date</th> <!-- Ne radi, poredi samo prvi znak u stringu -->
+			<th id= "ticketTableBuyer" onclick="sortTable(1)" >Buyer</th>
+				
+		</tr>
+	</thead>
+	<tbody id = "datas" class="datas">
+	
+	</tbody>
+	</table>
+	<br/><br/>
+	</div>
+
+
+</div>
+<script src="js/menu.js" charset="utf 8"></script>
+<script src="js/projectionPage.js" charset="utf 8"></script>
+<script src="js/logout.js" charset="utf 8"></script>
+</body>
+
+</html>
